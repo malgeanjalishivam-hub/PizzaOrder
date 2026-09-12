@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+       height: 100vh;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    header{
+        width: 100%;
+        height: 5rem;
+        background-color: black;
+        color:white;
+        text-align: center;  
+    }
+    .container{
+        width: 15rem;
+        height: 20rem;
+        margin-top: 4rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px ;
+    }
+    .container img{
+        width: 90%;
+        height: 50%;
+        margin-left: 0.8rem;
+        margin-top: 0.8rem;
+        border-radius: 10px;
+        border: none;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .container h2{
+        text-align: center;
+    }
+    .ru{
+        font-weight: 100;
+        text-align: center;
+        margin-top: 7px;
+    }
+    .order{
+        background-color: #fa7c06;
+        padding: 0.7rem 1.4rem;
+        color: white;
+        border-radius: 7px;
+        border: none;
+        margin-left: 4.3rem;
+        margin-top: 19px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .order:active{
+        color: rgb(33, 33, 113);
+        background-color: aqua;
+    }
+    .btn{
+        margin-top: 5rem;
+        background-color: purple;
+        color: white;
+        padding: 1rem 1.8rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-left: 43rem;
+        cursor: pointer;
+    }
+    .btn:active{
+        color: aliceblue;
+        background-color: palevioletred;
+    }
+    #orderPizza{
+        color: rgb(2, 108, 2);
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 2rem;
+    
+    }
+    #orderPaw{
+        color: rgb(2, 108, 2);
+        font-weight: bolder;
+         text-align: center;
+         margin-top: 3rem;
+         
+    }
+</style>
+<body>
+    <header> 
+        <h1>🍴🍽️ ....  My Restourent....  🍽️🍴</h1>
+     </header>
+       <div class="box">
+         <div class="container">
+            <img src="https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=" alt="pizza">
+            <h2>Pizza</h2>
+            <h3 class="ru">Rs.250</h3>
+            <button class="order" onclick="orderPizza()">Order Now</button>
+         </div>
+         <div class="container">
+            <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Instant-Pot-Mumbai-Pav-Bhaji-Recipe.jpg" alt="paw bhaji">
+            <h2>Paw-Bhaaji</h2>
+            <h3 class="ru">Rs.150</h3>
+            <button class="order" onclick="orderPaw()">Order Now</button>
+         </div>
+       </div> 
+
+       <p id="orderPizza"></p>
+       <p id="orderPaw"></p>
+
+       
+</body>
+<script>
+    function orderPizza(){
+        document.getElementById("orderPizza").innerHTML="Pizza ordered successfully!"
+                             
+    }
+    function orderPaw(){
+        document.getElementById("orderPaw").innerHTML="Paw-Bhaaji Ordered Successfully!"
+    }
+</script>
+
+
+</html>
